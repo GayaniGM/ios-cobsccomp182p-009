@@ -1,0 +1,20 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'GayaniMadhushika-ios-cobsccomp182p-009' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for GayaniMadhushika-ios-cobsccomp182p-009
+	pod 'Firebase/Analytics'
+
+  target 'GayaniMadhushika-ios-cobsccomp182p-009Tests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'GayaniMadhushika-ios-cobsccomp182p-009UITests' do
+    # Pods for testing
+  end
+
+end

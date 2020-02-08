@@ -1,0 +1,6 @@
+framework module Pods_GayaniMadhushika_ios_cobsccomp182p_009Tests {
+  umbrella header "Pods-GayaniMadhushika-ios-cobsccomp182p-009Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
