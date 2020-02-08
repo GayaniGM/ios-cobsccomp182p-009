@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C4FB172558CC29001AE87BD /* Pods_GayaniMadhushika_ios_cobsccomp182p_009Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E09A4A3353A743E0A6FE5C4F /* Pods_GayaniMadhushika_ios_cobsccomp182p_009Tests.framework */; };
 		8CDFB4F923EDF75C00B7537A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFB4F823EDF75C00B7537A /* AppDelegate.swift */; };
 		8CDFB4FB23EDF75C00B7537A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFB4FA23EDF75C00B7537A /* ViewController.swift */; };
 		8CDFB4FE23EDF75C00B7537A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CDFB4FC23EDF75C00B7537A /* Main.storyboard */; };
@@ -16,6 +17,10 @@
 		8CDFB51123EDF75F00B7537A /* GayaniMadhushika_ios_cobsccomp182p_009Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFB51023EDF75F00B7537A /* GayaniMadhushika_ios_cobsccomp182p_009Tests.swift */; };
 		8CDFB51C23EDF75F00B7537A /* GayaniMadhushika_ios_cobsccomp182p_009UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFB51B23EDF75F00B7537A /* GayaniMadhushika_ios_cobsccomp182p_009UITests.swift */; };
 		8CDFB52C23EDFD8900B7537A /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFB52B23EDFD8900B7537A /* CollectionViewCell.swift */; };
+		8CDFB53423EF1ABF00B7537A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CDFB53323EF1ABE00B7537A /* GoogleService-Info.plist */; };
+		8CDFB53723EF32FD00B7537A /* btnCustomize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFB53623EF32FD00B7537A /* btnCustomize.swift */; };
+		E59AA3A928EDB55B6C772CAA /* Pods_GayaniMadhushika_ios_cobsccomp182p_009.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E70BF600F7EAD8442B2DBDB /* Pods_GayaniMadhushika_ios_cobsccomp182p_009.framework */; };
+		FF8E3235B480307948A144F0 /* Pods_GayaniMadhushika_ios_cobsccomp182p_009_GayaniMadhushika_ios_cobsccomp182p_009UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A10175DD983C6EC7360F4E21 /* Pods_GayaniMadhushika_ios_cobsccomp182p_009_GayaniMadhushika_ios_cobsccomp182p_009UITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		401629F716E0A162F1C9C3C5 /* Pods-GayaniMadhushika-ios-cobsccomp182p-009Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GayaniMadhushika-ios-cobsccomp182p-009Tests.debug.xcconfig"; path = "Target Support Files/Pods-GayaniMadhushika-ios-cobsccomp182p-009Tests/Pods-GayaniMadhushika-ios-cobsccomp182p-009Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		50F184225A177C88DAF6E286 /* Pods-GayaniMadhushika-ios-cobsccomp182p-009Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GayaniMadhushika-ios-cobsccomp182p-009Tests.release.xcconfig"; path = "Target Support Files/Pods-GayaniMadhushika-ios-cobsccomp182p-009Tests/Pods-GayaniMadhushika-ios-cobsccomp182p-009Tests.release.xcconfig"; sourceTree = "<group>"; };
+		77BA421320FF1A901FE0C0DE /* Pods-GayaniMadhushika-ios-cobsccomp182p-009.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GayaniMadhushika-ios-cobsccomp182p-009.release.xcconfig"; path = "Target Support Files/Pods-GayaniMadhushika-ios-cobsccomp182p-009/Pods-GayaniMadhushika-ios-cobsccomp182p-009.release.xcconfig"; sourceTree = "<group>"; };
 		8CDFB4F523EDF75C00B7537A /* GayaniMadhushika-ios-cobsccomp182p-009.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GayaniMadhushika-ios-cobsccomp182p-009.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CDFB4F823EDF75C00B7537A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CDFB4FA23EDF75C00B7537A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +59,14 @@
 		8CDFB51B23EDF75F00B7537A /* GayaniMadhushika_ios_cobsccomp182p_009UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GayaniMadhushika_ios_cobsccomp182p_009UITests.swift; sourceTree = "<group>"; };
 		8CDFB51D23EDF75F00B7537A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CDFB52B23EDFD8900B7537A /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		8CDFB53323EF1ABE00B7537A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8CDFB53623EF32FD00B7537A /* btnCustomize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = btnCustomize.swift; sourceTree = "<group>"; };
+		9E70BF600F7EAD8442B2DBDB /* Pods_GayaniMadhushika_ios_cobsccomp182p_009.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GayaniMadhushika_ios_cobsccomp182p_009.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A10175DD983C6EC7360F4E21 /* Pods_GayaniMadhushika_ios_cobsccomp182p_009_GayaniMadhushika_ios_cobsccomp182p_009UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GayaniMadhushika_ios_cobsccomp182p_009_GayaniMadhushika_ios_cobsccomp182p_009UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD93A49E413E572174C71176 /* Pods-GayaniMadhushika-ios-cobsccomp182p-009-GayaniMadhushika-ios-cobsccomp182p-009UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GayaniMadhushika-ios-cobsccomp182p-009-GayaniMadhushika-ios-cobsccomp182p-009UITests.debug.xcconfig"; path = "Target Support Files/Pods-GayaniMadhushika-ios-cobsccomp182p-009-GayaniMadhushika-ios-cobsccomp182p-009UITests/Pods-GayaniMadhushika-ios-cobsccomp182p-009-GayaniMadhushika-ios-cobsccomp182p-009UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DCD7CB32A8836AA7CFDEB534 /* Pods-GayaniMadhushika-ios-cobsccomp182p-009.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GayaniMadhushika-ios-cobsccomp182p-009.debug.xcconfig"; path = "Target Support Files/Pods-GayaniMadhushika-ios-cobsccomp182p-009/Pods-GayaniMadhushika-ios-cobsccomp182p-009.debug.xcconfig"; sourceTree = "<group>"; };
+		E09A4A3353A743E0A6FE5C4F /* Pods_GayaniMadhushika_ios_cobsccomp182p_009Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GayaniMadhushika_ios_cobsccomp182p_009Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E52271A1C1DE9525D52B5692 /* Pods-GayaniMadhushika-ios-cobsccomp182p-009-GayaniMadhushika-ios-cobsccomp182p-009UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GayaniMadhushika-ios-cobsccomp182p-009-GayaniMadhushika-ios-cobsccomp182p-009UITests.release.xcconfig"; path = "Target Support Files/Pods-GayaniMadhushika-ios-cobsccomp182p-009-GayaniMadhushika-ios-cobsccomp182p-009UITests/Pods-GayaniMadhushika-ios-cobsccomp182p-009-GayaniMadhushika-ios-cobsccomp182p-009UITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E59AA3A928EDB55B6C772CAA /* Pods_GayaniMadhushika_ios_cobsccomp182p_009.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C4FB172558CC29001AE87BD /* Pods_GayaniMadhushika_ios_cobsccomp182p_009Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +90,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF8E3235B480307948A144F0 /* Pods_GayaniMadhushika_ios_cobsccomp182p_009_GayaniMadhushika_ios_cobsccomp182p_009UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00DC8D371B2BDEBACE237932 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9E70BF600F7EAD8442B2DBDB /* Pods_GayaniMadhushika_ios_cobsccomp182p_009.framework */,
+				A10175DD983C6EC7360F4E21 /* Pods_GayaniMadhushika_ios_cobsccomp182p_009_GayaniMadhushika_ios_cobsccomp182p_009UITests.framework */,
+				E09A4A3353A743E0A6FE5C4F /* Pods_GayaniMadhushika_ios_cobsccomp182p_009Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8CDFB4EC23EDF75C00B7537A = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +114,8 @@
 				8CDFB50F23EDF75F00B7537A /* GayaniMadhushika-ios-cobsccomp182p-009Tests */,
 				8CDFB51A23EDF75F00B7537A /* GayaniMadhushika-ios-cobsccomp182p-009UITests */,
 				8CDFB4F623EDF75C00B7537A /* Products */,
+				B03EBB47100B88FAB5C1D331 /* Pods */,
+				00DC8D371B2BDEBACE237932 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +132,7 @@
 		8CDFB4F723EDF75C00B7537A /* GayaniMadhushika-ios-cobsccomp182p-009 */ = {
 			isa = PBXGroup;
 			children = (
+				8CDFB53523EF329C00B7537A /* UICustomStyles */,
 				8CDFB4F823EDF75C00B7537A /* AppDelegate.swift */,
 				8CDFB4FA23EDF75C00B7537A /* ViewController.swift */,
 				8CDFB52B23EDFD8900B7537A /* CollectionViewCell.swift */,
@@ -108,6 +140,7 @@
 				8CDFB50223EDF75F00B7537A /* Assets.xcassets */,
 				8CDFB50423EDF75F00B7537A /* LaunchScreen.storyboard */,
 				8CDFB50723EDF75F00B7537A /* Info.plist */,
+				8CDFB53323EF1ABE00B7537A /* GoogleService-Info.plist */,
 				8CDFB4FF23EDF75C00B7537A /* GayaniMadhushika_ios_cobsccomp182p_009.xcdatamodeld */,
 			);
 			path = "GayaniMadhushika-ios-cobsccomp182p-009";
@@ -131,6 +164,27 @@
 			path = "GayaniMadhushika-ios-cobsccomp182p-009UITests";
 			sourceTree = "<group>";
 		};
+		8CDFB53523EF329C00B7537A /* UICustomStyles */ = {
+			isa = PBXGroup;
+			children = (
+				8CDFB53623EF32FD00B7537A /* btnCustomize.swift */,
+			);
+			path = UICustomStyles;
+			sourceTree = "<group>";
+		};
+		B03EBB47100B88FAB5C1D331 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DCD7CB32A8836AA7CFDEB534 /* Pods-GayaniMadhushika-ios-cobsccomp182p-009.debug.xcconfig */,
+				77BA421320FF1A901FE0C0DE /* Pods-GayaniMadhushika-ios-cobsccomp182p-009.release.xcconfig */,
+				AD93A49E413E572174C71176 /* Pods-GayaniMadhushika-ios-cobsccomp182p-009-GayaniMadhushika-ios-cobsccomp182p-009UITests.debug.xcconfig */,
+				E52271A1C1DE9525D52B5692 /* Pods-GayaniMadhushika-ios-cobsccomp182p-009-GayaniMadhushika-ios-cobsccomp182p-009UITests.release.xcconfig */,
+				401629F716E0A162F1C9C3C5 /* Pods-GayaniMadhushika-ios-cobsccomp182p-009Tests.debug.xcconfig */,
+				50F184225A177C88DAF6E286 /* Pods-GayaniMadhushika-ios-cobsccomp182p-009Tests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +192,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8CDFB52023EDF75F00B7537A /* Build configuration list for PBXNativeTarget "GayaniMadhushika-ios-cobsccomp182p-009" */;
 			buildPhases = (
+				AA9109C161397E6555A0FC4C /* [CP] Check Pods Manifest.lock */,
 				8CDFB4F123EDF75C00B7537A /* Sources */,
 				8CDFB4F223EDF75C00B7537A /* Frameworks */,
 				8CDFB4F323EDF75C00B7537A /* Resources */,
+				27CB128D9F4BD6955BF31874 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,6 +211,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8CDFB52323EDF75F00B7537A /* Build configuration list for PBXNativeTarget "GayaniMadhushika-ios-cobsccomp182p-009Tests" */;
 			buildPhases = (
+				4C247188ED5EF87E36BBBAA6 /* [CP] Check Pods Manifest.lock */,
 				8CDFB50823EDF75F00B7537A /* Sources */,
 				8CDFB50923EDF75F00B7537A /* Frameworks */,
 				8CDFB50A23EDF75F00B7537A /* Resources */,
@@ -173,9 +230,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8CDFB52623EDF75F00B7537A /* Build configuration list for PBXNativeTarget "GayaniMadhushika-ios-cobsccomp182p-009UITests" */;
 			buildPhases = (
+				042F9BB63B2D42BFD03097BA /* [CP] Check Pods Manifest.lock */,
 				8CDFB51323EDF75F00B7537A /* Sources */,
 				8CDFB51423EDF75F00B7537A /* Frameworks */,
 				8CDFB51523EDF75F00B7537A /* Resources */,
+				7826F20586D7FDE4FD9A4336 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -236,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CDFB50623EDF75F00B7537A /* LaunchScreen.storyboard in Resources */,
+				8CDFB53423EF1ABF00B7537A /* GoogleService-Info.plist in Resources */,
 				8CDFB50323EDF75F00B7537A /* Assets.xcassets in Resources */,
 				8CDFB4FE23EDF75C00B7537A /* Main.storyboard in Resources */,
 			);
@@ -257,6 +317,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		042F9BB63B2D42BFD03097BA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GayaniMadhushika-ios-cobsccomp182p-009-GayaniMadhushika-ios-cobsccomp182p-009UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		27CB128D9F4BD6955BF31874 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GayaniMadhushika-ios-cobsccomp182p-009/Pods-GayaniMadhushika-ios-cobsccomp182p-009-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GayaniMadhushika-ios-cobsccomp182p-009/Pods-GayaniMadhushika-ios-cobsccomp182p-009-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GayaniMadhushika-ios-cobsccomp182p-009/Pods-GayaniMadhushika-ios-cobsccomp182p-009-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4C247188ED5EF87E36BBBAA6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GayaniMadhushika-ios-cobsccomp182p-009Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7826F20586D7FDE4FD9A4336 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GayaniMadhushika-ios-cobsccomp182p-009-GayaniMadhushika-ios-cobsccomp182p-009UITests/Pods-GayaniMadhushika-ios-cobsccomp182p-009-GayaniMadhushika-ios-cobsccomp182p-009UITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GayaniMadhushika-ios-cobsccomp182p-009-GayaniMadhushika-ios-cobsccomp182p-009UITests/Pods-GayaniMadhushika-ios-cobsccomp182p-009-GayaniMadhushika-ios-cobsccomp182p-009UITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GayaniMadhushika-ios-cobsccomp182p-009-GayaniMadhushika-ios-cobsccomp182p-009UITests/Pods-GayaniMadhushika-ios-cobsccomp182p-009-GayaniMadhushika-ios-cobsccomp182p-009UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA9109C161397E6555A0FC4C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GayaniMadhushika-ios-cobsccomp182p-009-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8CDFB4F123EDF75C00B7537A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -266,6 +429,7 @@
 				8CDFB4F923EDF75C00B7537A /* AppDelegate.swift in Sources */,
 				8CDFB52C23EDFD8900B7537A /* CollectionViewCell.swift in Sources */,
 				8CDFB50123EDF75C00B7537A /* GayaniMadhushika_ios_cobsccomp182p_009.xcdatamodeld in Sources */,
+				8CDFB53723EF32FD00B7537A /* btnCustomize.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +602,7 @@
 		};
 		8CDFB52123EDF75F00B7537A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCD7CB32A8836AA7CFDEB534 /* Pods-GayaniMadhushika-ios-cobsccomp182p-009.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -455,6 +620,7 @@
 		};
 		8CDFB52223EDF75F00B7537A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77BA421320FF1A901FE0C0DE /* Pods-GayaniMadhushika-ios-cobsccomp182p-009.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -472,6 +638,7 @@
 		};
 		8CDFB52423EDF75F00B7537A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 401629F716E0A162F1C9C3C5 /* Pods-GayaniMadhushika-ios-cobsccomp182p-009Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -492,6 +659,7 @@
 		};
 		8CDFB52523EDF75F00B7537A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50F184225A177C88DAF6E286 /* Pods-GayaniMadhushika-ios-cobsccomp182p-009Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +680,7 @@
 		};
 		8CDFB52723EDF75F00B7537A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD93A49E413E572174C71176 /* Pods-GayaniMadhushika-ios-cobsccomp182p-009-GayaniMadhushika-ios-cobsccomp182p-009UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -531,6 +700,7 @@
 		};
 		8CDFB52823EDF75F00B7537A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E52271A1C1DE9525D52B5692 /* Pods-GayaniMadhushika-ios-cobsccomp182p-009-GayaniMadhushika-ios-cobsccomp182p-009UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
