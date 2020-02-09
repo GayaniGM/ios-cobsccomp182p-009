@@ -19,6 +19,7 @@
 		8CDFB52C23EDFD8900B7537A /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFB52B23EDFD8900B7537A /* CollectionViewCell.swift */; };
 		8CDFB53423EF1ABF00B7537A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CDFB53323EF1ABE00B7537A /* GoogleService-Info.plist */; };
 		8CDFB53723EF32FD00B7537A /* btnCustomize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFB53623EF32FD00B7537A /* btnCustomize.swift */; };
+		8CEA337323EFCE8C0073E5BC /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEA337223EFCE8C0073E5BC /* SignInViewController.swift */; };
 		E59AA3A928EDB55B6C772CAA /* Pods_GayaniMadhushika_ios_cobsccomp182p_009.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E70BF600F7EAD8442B2DBDB /* Pods_GayaniMadhushika_ios_cobsccomp182p_009.framework */; };
 		FF8E3235B480307948A144F0 /* Pods_GayaniMadhushika_ios_cobsccomp182p_009_GayaniMadhushika_ios_cobsccomp182p_009UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A10175DD983C6EC7360F4E21 /* Pods_GayaniMadhushika_ios_cobsccomp182p_009_GayaniMadhushika_ios_cobsccomp182p_009UITests.framework */; };
 /* End PBXBuildFile section */
@@ -61,6 +62,7 @@
 		8CDFB52B23EDFD8900B7537A /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		8CDFB53323EF1ABE00B7537A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8CDFB53623EF32FD00B7537A /* btnCustomize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = btnCustomize.swift; sourceTree = "<group>"; };
+		8CEA337223EFCE8C0073E5BC /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		9E70BF600F7EAD8442B2DBDB /* Pods_GayaniMadhushika_ios_cobsccomp182p_009.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GayaniMadhushika_ios_cobsccomp182p_009.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A10175DD983C6EC7360F4E21 /* Pods_GayaniMadhushika_ios_cobsccomp182p_009_GayaniMadhushika_ios_cobsccomp182p_009UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GayaniMadhushika_ios_cobsccomp182p_009_GayaniMadhushika_ios_cobsccomp182p_009UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD93A49E413E572174C71176 /* Pods-GayaniMadhushika-ios-cobsccomp182p-009-GayaniMadhushika-ios-cobsccomp182p-009UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GayaniMadhushika-ios-cobsccomp182p-009-GayaniMadhushika-ios-cobsccomp182p-009UITests.debug.xcconfig"; path = "Target Support Files/Pods-GayaniMadhushika-ios-cobsccomp182p-009-GayaniMadhushika-ios-cobsccomp182p-009UITests/Pods-GayaniMadhushika-ios-cobsccomp182p-009-GayaniMadhushika-ios-cobsccomp182p-009UITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -132,13 +134,12 @@
 		8CDFB4F723EDF75C00B7537A /* GayaniMadhushika-ios-cobsccomp182p-009 */ = {
 			isa = PBXGroup;
 			children = (
-				8CDFB53523EF329C00B7537A /* UICustomStyles */,
 				8CDFB4F823EDF75C00B7537A /* AppDelegate.swift */,
-				8CDFB4FA23EDF75C00B7537A /* ViewController.swift */,
-				8CDFB52B23EDFD8900B7537A /* CollectionViewCell.swift */,
 				8CDFB4FC23EDF75C00B7537A /* Main.storyboard */,
-				8CDFB50223EDF75F00B7537A /* Assets.xcassets */,
 				8CDFB50423EDF75F00B7537A /* LaunchScreen.storyboard */,
+				8CEA336B23EFBA060073E5BC /* UIControllers */,
+				8CDFB53523EF329C00B7537A /* UICustomStyles */,
+				8CDFB50223EDF75F00B7537A /* Assets.xcassets */,
 				8CDFB50723EDF75F00B7537A /* Info.plist */,
 				8CDFB53323EF1ABE00B7537A /* GoogleService-Info.plist */,
 				8CDFB4FF23EDF75C00B7537A /* GayaniMadhushika_ios_cobsccomp182p_009.xcdatamodeld */,
@@ -170,6 +171,16 @@
 				8CDFB53623EF32FD00B7537A /* btnCustomize.swift */,
 			);
 			path = UICustomStyles;
+			sourceTree = "<group>";
+		};
+		8CEA336B23EFBA060073E5BC /* UIControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8CDFB4FA23EDF75C00B7537A /* ViewController.swift */,
+				8CDFB52B23EDFD8900B7537A /* CollectionViewCell.swift */,
+				8CEA337223EFCE8C0073E5BC /* SignInViewController.swift */,
+			);
+			path = UIControllers;
 			sourceTree = "<group>";
 		};
 		B03EBB47100B88FAB5C1D331 /* Pods */ = {
@@ -425,6 +436,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CEA337323EFCE8C0073E5BC /* SignInViewController.swift in Sources */,
 				8CDFB4FB23EDF75C00B7537A /* ViewController.swift in Sources */,
 				8CDFB4F923EDF75C00B7537A /* AppDelegate.swift in Sources */,
 				8CDFB52C23EDFD8900B7537A /* CollectionViewCell.swift in Sources */,
