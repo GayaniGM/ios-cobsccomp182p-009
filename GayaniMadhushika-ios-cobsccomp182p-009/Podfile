@@ -7,6 +7,7 @@ target 'GayaniMadhushika-ios-cobsccomp182p-009' do
 
   # Pods for GayaniMadhushika-ios-cobsccomp182p-009
 	pod 'Firebase/Analytics'
+	pod 'Firebase/Core'
 
   target 'GayaniMadhushika-ios-cobsccomp182p-009Tests' do
     inherit! :search_paths
