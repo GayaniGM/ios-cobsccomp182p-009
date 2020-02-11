@@ -10,6 +10,14 @@ import UIKit
 
 class SignInViewController: UIViewController {
 
+    
+    @IBOutlet weak var userNameTextField: UITextField!
+    
+    @IBOutlet weak var userPasswordTextField: UITextField!
+    
+    @IBOutlet weak var errorTextField: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,6 +31,8 @@ class SignInViewController: UIViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
         appDelegate.window?.rootViewController = bottomTabBar
+        
+        
         
     }
     
