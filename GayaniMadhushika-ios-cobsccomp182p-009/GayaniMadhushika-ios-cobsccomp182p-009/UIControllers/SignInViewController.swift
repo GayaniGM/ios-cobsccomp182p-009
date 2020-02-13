@@ -7,43 +7,61 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class SignInViewController: UIViewController {
+    
 
-    
     @IBOutlet weak var userNameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     
-    @IBOutlet weak var userPasswordTextField: UITextField!
     
-    @IBOutlet weak var errorTextField: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var registerButton: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setUpButtonStyles()
 
-        // Do any additional setup after loading the view.
+        
+    }
+    
+    
+    func setUpButtonStyles(){
+        
+        Utilities.styleTextField(userNameTextField)
+        Utilities.styleTextField(passwordTextField)
+        Utilities.styleFilledButton(loginButton)
+        Utilities.styleHollowButton(registerButton)
+        
     }
     
     @IBAction func SignInButtonTapped(_ sender: Any) {
        
-        let bottomTabBar = self.storyboard?.instantiateViewController(withIdentifier: "bottomTabBar") as! UITabBarController
+        let alert = AlertDialog();
         
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        
-        appDelegate.window?.rootViewController = bottomTabBar
-        
-        
-        
-    }
+        Auth.auth().signIn(withEmail: userNameTextField.text!, password: passwordTextField.text!) { (user, error) in
+            if error != nil {
+                
+                alert.showAlert(title: "Error", message: "Your email and password is invalid", buttonText: "OK")
+            }
+            else if user != nil {
+                
+                alert.showAlert(title: "Successful", message: "You have successfully Logged In", buttonText: "OK")
+                
+                //Enabling the Major viewing page
+                let bottomTabBar = self.storyboard?.instantiateViewController(withIdentifier: "bottomTabBar") as! UITabBarController
+                
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                
+                appDelegate.window?.rootViewController = bottomTabBar
+            }
+            
+      }
+
+  }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

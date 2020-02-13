@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2C4FB172558CC29001AE87BD /* Pods_GayaniMadhushika_ios_cobsccomp182p_009Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E09A4A3353A743E0A6FE5C4F /* Pods_GayaniMadhushika_ios_cobsccomp182p_009Tests.framework */; };
+		8C1EBFE423F48C3C00268E5C /* AlertBoxDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1EBFE323F48C3C00268E5C /* AlertBoxDisplay.swift */; };
 		8CDFB4F923EDF75C00B7537A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFB4F823EDF75C00B7537A /* AppDelegate.swift */; };
 		8CDFB4FB23EDF75C00B7537A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFB4FA23EDF75C00B7537A /* ViewController.swift */; };
 		8CDFB4FE23EDF75C00B7537A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CDFB4FC23EDF75C00B7537A /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 		8CDFB52C23EDFD8900B7537A /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFB52B23EDFD8900B7537A /* CollectionViewCell.swift */; };
 		8CDFB53423EF1ABF00B7537A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CDFB53323EF1ABE00B7537A /* GoogleService-Info.plist */; };
 		8CDFB53723EF32FD00B7537A /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFB53623EF32FD00B7537A /* Utilities.swift */; };
+		8CEA14ED23F3A62E00AAAC3B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEA14EC23F3A62E00AAAC3B /* Constants.swift */; };
 		8CEA337323EFCE8C0073E5BC /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEA337223EFCE8C0073E5BC /* SignInViewController.swift */; };
 		8CED5DC023F24D820064083C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CED5DBF23F24D820064083C /* SignUpViewController.swift */; };
 		E59AA3A928EDB55B6C772CAA /* Pods_GayaniMadhushika_ios_cobsccomp182p_009.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E70BF600F7EAD8442B2DBDB /* Pods_GayaniMadhushika_ios_cobsccomp182p_009.framework */; };
@@ -46,6 +48,7 @@
 		401629F716E0A162F1C9C3C5 /* Pods-GayaniMadhushika-ios-cobsccomp182p-009Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GayaniMadhushika-ios-cobsccomp182p-009Tests.debug.xcconfig"; path = "Target Support Files/Pods-GayaniMadhushika-ios-cobsccomp182p-009Tests/Pods-GayaniMadhushika-ios-cobsccomp182p-009Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		50F184225A177C88DAF6E286 /* Pods-GayaniMadhushika-ios-cobsccomp182p-009Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GayaniMadhushika-ios-cobsccomp182p-009Tests.release.xcconfig"; path = "Target Support Files/Pods-GayaniMadhushika-ios-cobsccomp182p-009Tests/Pods-GayaniMadhushika-ios-cobsccomp182p-009Tests.release.xcconfig"; sourceTree = "<group>"; };
 		77BA421320FF1A901FE0C0DE /* Pods-GayaniMadhushika-ios-cobsccomp182p-009.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GayaniMadhushika-ios-cobsccomp182p-009.release.xcconfig"; path = "Target Support Files/Pods-GayaniMadhushika-ios-cobsccomp182p-009/Pods-GayaniMadhushika-ios-cobsccomp182p-009.release.xcconfig"; sourceTree = "<group>"; };
+		8C1EBFE323F48C3C00268E5C /* AlertBoxDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBoxDisplay.swift; sourceTree = "<group>"; };
 		8CDFB4F523EDF75C00B7537A /* GayaniMadhushika-ios-cobsccomp182p-009.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GayaniMadhushika-ios-cobsccomp182p-009.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CDFB4F823EDF75C00B7537A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CDFB4FA23EDF75C00B7537A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +66,7 @@
 		8CDFB52B23EDFD8900B7537A /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		8CDFB53323EF1ABE00B7537A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8CDFB53623EF32FD00B7537A /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		8CEA14EC23F3A62E00AAAC3B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8CEA337223EFCE8C0073E5BC /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		8CED5DBF23F24D820064083C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		9E70BF600F7EAD8442B2DBDB /* Pods_GayaniMadhushika_ios_cobsccomp182p_009.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GayaniMadhushika_ios_cobsccomp182p_009.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,6 +175,8 @@
 			isa = PBXGroup;
 			children = (
 				8CDFB53623EF32FD00B7537A /* Utilities.swift */,
+				8CEA14EC23F3A62E00AAAC3B /* Constants.swift */,
+				8C1EBFE323F48C3C00268E5C /* AlertBoxDisplay.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -443,9 +449,11 @@
 				8CED5DC023F24D820064083C /* SignUpViewController.swift in Sources */,
 				8CDFB4FB23EDF75C00B7537A /* ViewController.swift in Sources */,
 				8CDFB4F923EDF75C00B7537A /* AppDelegate.swift in Sources */,
+				8C1EBFE423F48C3C00268E5C /* AlertBoxDisplay.swift in Sources */,
 				8CDFB52C23EDFD8900B7537A /* CollectionViewCell.swift in Sources */,
 				8CDFB50123EDF75C00B7537A /* GayaniMadhushika_ios_cobsccomp182p_009.xcdatamodeld in Sources */,
 				8CDFB53723EF32FD00B7537A /* Utilities.swift in Sources */,
+				8CEA14ED23F3A62E00AAAC3B /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
