@@ -15,8 +15,6 @@ class SignInViewController: UIViewController {
 
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    
-    
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var registerButton: UIButton!
     
@@ -26,7 +24,6 @@ class SignInViewController: UIViewController {
         
         setUpButtonStyles()
 
-        
     }
     
     
@@ -41,6 +38,7 @@ class SignInViewController: UIViewController {
     
     @IBAction func SignInButtonTapped(_ sender: Any) {
        
+        //Username and password authentication
         let alert = AlertDialog();
         
         Auth.auth().signIn(withEmail: userNameTextField.text!, password: passwordTextField.text!) { (user, error) in
@@ -49,7 +47,8 @@ class SignInViewController: UIViewController {
                 alert.showAlert(title: "Error", message: "Your email and password is invalid", buttonText: "OK")
             }
             else if user != nil {
-                
+                //store the email address
+                UserDefaults.standard.set(self.userNameTextField.text, forKey: "email")
                 alert.showAlert(title: "Successful", message: "You have successfully Logged In", buttonText: "OK")
                 
                 //Enabling the Major viewing page
@@ -60,8 +59,22 @@ class SignInViewController: UIViewController {
                 appDelegate.window?.rootViewController = bottomTabBar
             }
             
-      }
+        }
 
   }
+    
+    
+    func resetPassword(email: String, onSuccess: @escaping() -> Void, onError: @escaping(_ errorMessage: String) -> Void){
+       
+        Auth.auth().sendPasswordReset(withEmail: email) { (error) in
+            if error == nil{
+                onSuccess()
+            }
+            else{
+                onError(error!.localizedDescription)
+            }
+        }
+        
+    }
     
 }

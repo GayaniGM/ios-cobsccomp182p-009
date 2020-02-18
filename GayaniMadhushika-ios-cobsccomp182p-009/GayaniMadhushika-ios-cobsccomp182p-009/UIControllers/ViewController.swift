@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import LocalAuthentication
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
+    
     let eventName = ["Hola' 2020", "Teentainment with NIBM", "NIC Design Fest", "IOT Hackathon 2020", "Youth Rave with B n S", "CyberFest 2k19", "Frozen Fest 2016", "Blood Donation Compaign 2019", "NIBM Halloween 2k19", "NIBM Sports Day 2019", "NIBM Awurudu 2015"]
     
     let eventImage = [UIImage(named: "image3"), UIImage(named: "image1"), UIImage(named: "image2"), UIImage(named: "image4"), UIImage(named: "image5"), UIImage(named: "image6"), UIImage(named: "image7"), UIImage(named: "image8"), UIImage(named: "image9"), UIImage(named: "image10"), UIImage(named: "image11")]
@@ -30,7 +32,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
-        
+       
         cell.eventName.text = eventName[indexPath.row]
         cell.eventImage.image = eventImage[indexPath.row]
         cell.eventVenue.text = eventVenue[indexPath.row]
@@ -49,18 +51,55 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
         
         return cell
+        
+
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let context = LAContext()
+        var error : NSError?
+        
+        //if touch id is available in the device
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error){
+            
+            let reason = "Authenticate with touch ID"
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason, reply:  { (success, error) in
+                //Show alert whether touch id is authenticated or not
+                if success{
+                    
+                    //Navigate to events detail page
+                    let bottomTabBar = self.storyboard?.instantiateViewController(withIdentifier: "bottomTabBar") as! UITabBarController
+                    
+                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                    
+                    appDelegate.window?.rootViewController = bottomTabBar
+                    
+                    self.showAlertController("Touch ID Authentication is successful!")
+
+                }
+                else{
+                    self.showAlertController("Touch ID Authentication Failed! Please log in.")
+                }
+            })
+            
+        }
+        
+        else{
+            
+            self.showAlertController("Touch ID is not avaialable!")
+        }
+        
     }
 
+
+    func showAlertController(_ message: String){
+        
+        let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alertController, animated: true, completion: nil)
+        
+    }
+
+
 }
-
-
-
-
-
-
-
-
-
-
-
-

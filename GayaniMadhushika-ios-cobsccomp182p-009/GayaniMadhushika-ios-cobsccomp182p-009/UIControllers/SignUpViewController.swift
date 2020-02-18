@@ -88,7 +88,7 @@ class SignUpViewController: UIViewController {
             
             let username = userNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let batchName = batchNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let email  = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
             //Create the  user
@@ -101,12 +101,12 @@ class SignUpViewController: UIViewController {
                     
                 }
                 
-                //User crreated and store username and batchname
+                //User created and store username and batchname
                 else
                 {
                     let db = Firestore.firestore()
                     
-                    db.collection("users").addDocument(data: ["batchName":batchName,"username":username,"uid": result!.user.uid])
+                    db.collection("users").addDocument(data: ["batchName":batchName,"username":username,"email":email,"password":password,"uid": result!.user.uid])
                     { (error) in
                         
                         if error != nil
@@ -129,7 +129,6 @@ class SignUpViewController: UIViewController {
     
     func showerror(_ message:String){
         
-        
         passwordErrorLabel.text = message
         passwordErrorLabel.alpha = 1
         
@@ -142,6 +141,8 @@ class SignUpViewController: UIViewController {
         
         view.window?.rootViewController = signInViewController
         view.window?.makeKeyAndVisible()
+        
     }
+    
    
 }

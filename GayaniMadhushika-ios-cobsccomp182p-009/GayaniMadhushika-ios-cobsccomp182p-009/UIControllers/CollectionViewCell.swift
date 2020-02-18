@@ -18,4 +18,5 @@ class CollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var eventDateTime: UILabel!
     
+
 }
