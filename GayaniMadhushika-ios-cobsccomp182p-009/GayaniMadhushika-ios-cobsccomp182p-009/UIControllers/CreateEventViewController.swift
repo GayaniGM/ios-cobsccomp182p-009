@@ -1,0 +1,321 @@
+//
+//  CreateEventViewController.swift
+//  GayaniMadhushika-ios-cobsccomp182p-009
+//
+//  Created by Imali Chathurika on 2/18/20.
+//  Copyright © 2020 Gayani Madhushika. All rights reserved.
+//
+
+import UIKit
+import FirebaseAuth
+import Firebase
+import MapKit
+import AVFoundation
+
+class CreateEventViewController: UIViewController {
+
+    @IBOutlet weak var eventName: UITextField!
+    @IBOutlet weak var details: UITextField!
+    @IBOutlet weak var startDateAndTime: UITextField!
+    @IBOutlet weak var endDateAndTme: UITextField!
+    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var contributerName: UITextField!
+    @IBOutlet weak var contributerEmail: UITextField!
+    @IBOutlet weak var cost: UITextField!
+    @IBOutlet weak var eventImage: UIImageView!
+    @IBOutlet weak var updateVenue: UIButton!
+    @IBOutlet weak var reviewButton: UIButton!
+    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var location: UITextField!
+    @IBOutlet weak var recordButton: UIButton!
+    @IBOutlet weak var playButton: UIButton!
+    
+    
+    var recordingSession: AVAudioSession!
+    var audioRecorder: AVAudioRecorder!
+    var audioPlayer:AVAudioPlayer!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setUpButtonStyles()
+
+        //setup Recorder
+        self.setupView()
+    }
+    
+    
+    //Style up the elements
+    func setUpButtonStyles(){
+        
+        //style up button and textboxes
+        Utilities.styleTextField(eventName)
+        Utilities.styleTextField(details)
+        Utilities.styleTextField(startDateAndTime)
+        Utilities.styleTextField(endDateAndTme)
+        Utilities.styleTextField(contributerName)
+        Utilities.styleTextField(contributerEmail)
+        Utilities.styleTextField(cost)
+        Utilities.styleTextField(location)
+        Utilities.styleHollowButton(updateVenue)
+        Utilities.styleHollowButton(reviewButton)
+        Utilities.styleFilledButton(saveButton)
+        
+    }
+    
+    func setupView() {
+        recordingSession = AVAudioSession.sharedInstance()
+        
+        do {
+            try recordingSession.setCategory(.playAndRecord, mode: .default)
+            try recordingSession.setActive(true)
+            recordingSession.requestRecordPermission() { [unowned self] allowed in
+                DispatchQueue.main.async {
+                    if allowed {
+                        self.loadRecordingUI()
+                    } else {
+                        // failed to record
+                    }
+                }
+            }
+        } catch {
+            // failed to record
+        }
+    }
+    
+    func loadRecordingUI() {
+        recordButton.isEnabled = true
+        playButton.isEnabled = false
+        recordButton.setTitle("Tap to Record", for: .normal)
+        recordButton.addTarget(self, action: #selector(recordAudioButtonTapped), for: .touchUpInside)
+        view.addSubview(recordButton)
+    }
+    
+    
+    @IBAction func recordAudioButtonTapped(_ sender: UIButton) {
+        
+        if audioRecorder == nil {
+            startRecording()
+        } else {
+            finishRecording(success: true)
+        }
+    }
+    
+    func startRecording() {
+        let audioFilename = getFileURL()
+        
+        let settings = [
+            AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
+            AVSampleRateKey: 12000,
+            AVNumberOfChannelsKey: 1,
+            AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
+        ]
+        
+        do {
+            audioRecorder = try AVAudioRecorder(url: audioFilename, settings: settings)
+            audioRecorder.delegate = self as? AVAudioRecorderDelegate
+            audioRecorder.record()
+            
+            recordButton.setTitle("Tap to Stop", for: .normal)
+            playButton.isEnabled = false
+        } catch {
+            finishRecording(success: false)
+        }
+    }
+    
+    func finishRecording(success: Bool) {
+        audioRecorder.stop()
+        audioRecorder = nil
+        
+        if success {
+            recordButton.setTitle("Tap to Re-record", for: .normal)
+        } else {
+            recordButton.setTitle("Tap to Record", for: .normal)
+            // recording failed :(
+        }
+        
+        playButton.isEnabled = true
+        recordButton.isEnabled = true
+    }
+    
+
+    @IBAction func playAudioButtonTapped(_ sender: UIButton) {
+        if (sender.titleLabel?.text == "Play"){
+            recordButton.isEnabled = false
+            sender.setTitle("Stop", for: .normal)
+            preparePlayer()
+            audioPlayer.play()
+        } else {
+            audioPlayer.stop()
+            sender.setTitle("Play", for: .normal)
+        }
+    }
+    
+    func preparePlayer() {
+        var error: NSError?
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: getFileURL() as URL)
+        } catch let error1 as NSError {
+            error = error1
+            audioPlayer = nil
+        }
+        
+        if let err = error {
+            print("AVAudioPlayer error: \(err.localizedDescription)")
+        } else {
+            audioPlayer.delegate = self as? AVAudioPlayerDelegate
+            audioPlayer.prepareToPlay()
+            audioPlayer.volume = 10.0
+        }
+    }
+    
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
+    
+    func getFileURL() -> URL {
+        let path = getDocumentsDirectory().appendingPathComponent("recording.m4a")
+        return path as URL
+    }
+    
+    //MARK: Delegates
+    
+    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
+        if !flag {
+            finishRecording(success: false)
+        }
+    }
+    
+    func audioRecorderEncodeErrorDidOccur(_ recorder: AVAudioRecorder, error: Error?) {
+        print("Error while recording audio \(error!.localizedDescription)")
+    }
+    
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        recordButton.isEnabled = true
+        playButton.setTitle("Play", for: .normal)
+    }
+    
+    func audioPlayerDecodeErrorDidOccur(_ player: AVAudioPlayer, error: Error?) {
+        print("Error while playing audio \(error!.localizedDescription)")
+    }
+    
+    //MARK: To upload video on server
+    
+    func uploadAudioToServer() {
+        /*Alamofire.upload(
+         multipartFormData: { multipartFormData in
+         multipartFormData.append(getFileURL(), withName: "audio.m4a")
+         },
+         to: "https://yourServerLink",
+         encodingCompletion: { encodingResult in
+         switch encodingResult {
+         case .success(let upload, _, _):
+         upload.responseJSON { response in
+         Print(response)
+         }
+         case .failure(let encodingError):
+         print(encodingError)
+         }
+         })*/
+    }
+    
+    
+    //Validate whether the inputs are correct display message whether there is an error
+    func validateFields() -> String?{
+        
+        //Text fields can not be empty
+        if eventName.text?.trimmingCharacters(in: .whitespacesAndNewlines)=="" || details.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || contributerName.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || contributerEmail.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""{
+            
+            return "Please fill in all fields"
+        }
+        
+        return nil
+
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    @IBAction func onClickSubmitToReview(_ sender: Any) {
+        
+        
+    }
+    
+    
+    @IBAction func onClickSave(_ sender: Any) {
+        
+         let alert = AlertDialog();
+        //Validate the field
+        let error = validateFields()
+       
+        if error != nil
+        {
+            
+        alert.showAlert(title: "Error", message: "Please fill all the fields", buttonText: "Ok")
+            
+        }
+            
+        else
+        {
+            
+            let eventNames = eventName.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let description = details.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+           // let venue  = location.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let name = contributerName.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let emailAddress = contributerEmail.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            
+            //Create the  user
+            Auth.auth().createUser(withEmail: contributerEmail.text!, password: contributerName.text!) { (result, err) in
+                
+                if err != nil
+                {
+                    
+                   alert.showAlert(title: "Error", message: "Error creating the new Event contributer", buttonText: "Ok")
+                    
+                }
+                    
+                    //User created and store field values
+                else
+                {
+                    let db = Firestore.firestore()
+
+                    db.collection("events").addDocument(data: ["eventNames":eventNames,"description":description,"name":name,"emailAddress":emailAddress,"uid": result!.user.uid])
+                    { (error) in
+
+                        if error != nil
+                        {
+                            alert.showAlert(title: "Error", message: "Error creating the new Event contributer", buttonText: "Ok")
+                        }
+
+                    }
+                    
+                    
+                    //Navigate to login page
+                  alert.showAlert(title: "Successful", message: "A new Event created", buttonText: "Ok")
+                    
+                }
+                
+            }
+            
+        }
+    }
+    
+    
+    
+}

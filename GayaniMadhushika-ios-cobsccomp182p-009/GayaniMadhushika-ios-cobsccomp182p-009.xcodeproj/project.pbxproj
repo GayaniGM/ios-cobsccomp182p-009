@@ -11,6 +11,8 @@
 		8C1EBFE423F48C3C00268E5C /* AlertBoxDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1EBFE323F48C3C00268E5C /* AlertBoxDisplay.swift */; };
 		8C3FC8B923FB188B007E5BC2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3FC8B823FB188B007E5BC2 /* SearchViewController.swift */; };
 		8C3FC8BB23FB8ECB007E5BC2 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3FC8BA23FB8ECB007E5BC2 /* ResetPasswordViewController.swift */; };
+		8CD5DFD124045CE900403D58 /* SearchResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD5DFD024045CE900403D58 /* SearchResultsController.swift */; };
+		8CD5DFD324045D9900403D58 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD5DFD224045D9900403D58 /* MapViewController.swift */; };
 		8CDFB4F923EDF75C00B7537A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFB4F823EDF75C00B7537A /* AppDelegate.swift */; };
 		8CDFB4FB23EDF75C00B7537A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFB4FA23EDF75C00B7537A /* ViewController.swift */; };
 		8CDFB4FE23EDF75C00B7537A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CDFB4FC23EDF75C00B7537A /* Main.storyboard */; };
@@ -22,6 +24,7 @@
 		8CDFB52C23EDFD8900B7537A /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFB52B23EDFD8900B7537A /* CollectionViewCell.swift */; };
 		8CDFB53423EF1ABF00B7537A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CDFB53323EF1ABE00B7537A /* GoogleService-Info.plist */; };
 		8CDFB53723EF32FD00B7537A /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFB53623EF32FD00B7537A /* Utilities.swift */; };
+		8CE58F63240435BF00FABF6B /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE58F62240435BF00FABF6B /* CreateEventViewController.swift */; };
 		8CEA14ED23F3A62E00AAAC3B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEA14EC23F3A62E00AAAC3B /* Constants.swift */; };
 		8CEA337323EFCE8C0073E5BC /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEA337223EFCE8C0073E5BC /* SignInViewController.swift */; };
 		8CED5DC023F24D820064083C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CED5DBF23F24D820064083C /* SignUpViewController.swift */; };
@@ -53,6 +56,8 @@
 		8C1EBFE323F48C3C00268E5C /* AlertBoxDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBoxDisplay.swift; sourceTree = "<group>"; };
 		8C3FC8B823FB188B007E5BC2 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		8C3FC8BA23FB8ECB007E5BC2 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		8CD5DFD024045CE900403D58 /* SearchResultsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsController.swift; sourceTree = "<group>"; };
+		8CD5DFD224045D9900403D58 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		8CDFB4F523EDF75C00B7537A /* GayaniMadhushika-ios-cobsccomp182p-009.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GayaniMadhushika-ios-cobsccomp182p-009.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CDFB4F823EDF75C00B7537A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CDFB4FA23EDF75C00B7537A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +75,7 @@
 		8CDFB52B23EDFD8900B7537A /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		8CDFB53323EF1ABE00B7537A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8CDFB53623EF32FD00B7537A /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		8CE58F62240435BF00FABF6B /* CreateEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
 		8CEA14EC23F3A62E00AAAC3B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8CEA337223EFCE8C0073E5BC /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		8CED5DBF23F24D820064083C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -178,6 +184,7 @@
 		8CDFB53523EF329C00B7537A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				8CD5DFD024045CE900403D58 /* SearchResultsController.swift */,
 				8CDFB53623EF32FD00B7537A /* Utilities.swift */,
 				8CEA14EC23F3A62E00AAAC3B /* Constants.swift */,
 				8C1EBFE323F48C3C00268E5C /* AlertBoxDisplay.swift */,
@@ -193,7 +200,9 @@
 				8CEA337223EFCE8C0073E5BC /* SignInViewController.swift */,
 				8CED5DBF23F24D820064083C /* SignUpViewController.swift */,
 				8C3FC8B823FB188B007E5BC2 /* SearchViewController.swift */,
+				8CE58F62240435BF00FABF6B /* CreateEventViewController.swift */,
 				8C3FC8BA23FB8ECB007E5BC2 /* ResetPasswordViewController.swift */,
+				8CD5DFD224045D9900403D58 /* MapViewController.swift */,
 			);
 			path = UIControllers;
 			sourceTree = "<group>";
@@ -223,6 +232,7 @@
 				8CDFB4F223EDF75C00B7537A /* Frameworks */,
 				8CDFB4F323EDF75C00B7537A /* Resources */,
 				27CB128D9F4BD6955BF31874 /* [CP] Embed Pods Frameworks */,
+				4E45E627204DC165458FE22C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -261,6 +271,7 @@
 				8CDFB51423EDF75F00B7537A /* Frameworks */,
 				8CDFB51523EDF75F00B7537A /* Resources */,
 				7826F20586D7FDE4FD9A4336 /* [CP] Embed Pods Frameworks */,
+				4891EA60B9609E538EFCC3F1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -383,6 +394,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GayaniMadhushika-ios-cobsccomp182p-009/Pods-GayaniMadhushika-ios-cobsccomp182p-009-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		4891EA60B9609E538EFCC3F1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GayaniMadhushika-ios-cobsccomp182p-009-GayaniMadhushika-ios-cobsccomp182p-009UITests/Pods-GayaniMadhushika-ios-cobsccomp182p-009-GayaniMadhushika-ios-cobsccomp182p-009UITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GayaniMadhushika-ios-cobsccomp182p-009-GayaniMadhushika-ios-cobsccomp182p-009UITests/Pods-GayaniMadhushika-ios-cobsccomp182p-009-GayaniMadhushika-ios-cobsccomp182p-009UITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GayaniMadhushika-ios-cobsccomp182p-009-GayaniMadhushika-ios-cobsccomp182p-009UITests/Pods-GayaniMadhushika-ios-cobsccomp182p-009-GayaniMadhushika-ios-cobsccomp182p-009UITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4C247188ED5EF87E36BBBAA6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -403,6 +431,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4E45E627204DC165458FE22C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GayaniMadhushika-ios-cobsccomp182p-009/Pods-GayaniMadhushika-ios-cobsccomp182p-009-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GayaniMadhushika-ios-cobsccomp182p-009/Pods-GayaniMadhushika-ios-cobsccomp182p-009-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GayaniMadhushika-ios-cobsccomp182p-009/Pods-GayaniMadhushika-ios-cobsccomp182p-009-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7826F20586D7FDE4FD9A4336 /* [CP] Embed Pods Frameworks */ = {
@@ -462,6 +507,9 @@
 				8CDFB50123EDF75C00B7537A /* GayaniMadhushika_ios_cobsccomp182p_009.xcdatamodeld in Sources */,
 				8CDFB53723EF32FD00B7537A /* Utilities.swift in Sources */,
 				8CEA14ED23F3A62E00AAAC3B /* Constants.swift in Sources */,
+				8CD5DFD124045CE900403D58 /* SearchResultsController.swift in Sources */,
+				8CE58F63240435BF00FABF6B /* CreateEventViewController.swift in Sources */,
+				8CD5DFD324045D9900403D58 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,9 +14,17 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if UserDefaults.standard.bool(forKey: "email") == true{
+            let  homeVc = self.storyboard?.instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
+            self.navigationController?.pushViewController(homeVc, animated: true)
+            
+        }
+        
     }
     
+    
     @IBAction func btnLogOut(_ sender: Any) {
+        
         UserDefaults.standard.removeObject(forKey: "email")
         
         let vc = storyboard?.instantiateViewController(withIdentifier: "Main")

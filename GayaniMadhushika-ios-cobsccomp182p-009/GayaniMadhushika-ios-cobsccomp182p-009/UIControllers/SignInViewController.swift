@@ -47,22 +47,25 @@ class SignInViewController: UIViewController {
                 alert.showAlert(title: "Error", message: "Your email and password is invalid", buttonText: "OK")
             }
             else if user != nil {
-                //store the email address
-                UserDefaults.standard.set(self.userNameTextField.text, forKey: "email")
-                alert.showAlert(title: "Successful", message: "You have successfully Logged In", buttonText: "OK")
+                    //store the email address
+                    UserDefaults.standard.set(self.userNameTextField.text, forKey: "email")
                 
-                //Enabling the Major viewing page
-                let bottomTabBar = self.storyboard?.instantiateViewController(withIdentifier: "bottomTabBar") as! UITabBarController
+                    let alert = AlertDialog();
                 
-                let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                
-                appDelegate.window?.rootViewController = bottomTabBar
+                    alert.showAlert(title: "Successful", message: "You have successfully Logged In", buttonText: "OK")
+                    
+                    //Enabling the Major viewing page
+                    let bottomTabBar = self.storyboard?.instantiateViewController(withIdentifier: "bottomTabBar") as! UITabBarController
+                    
+                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                    
+                    appDelegate.window?.rootViewController = bottomTabBar
+              
             }
             
         }
 
   }
-    
     
     func resetPassword(email: String, onSuccess: @escaping() -> Void, onError: @escaping(_ errorMessage: String) -> Void){
        

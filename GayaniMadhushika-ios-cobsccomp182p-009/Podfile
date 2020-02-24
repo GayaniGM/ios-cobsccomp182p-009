@@ -11,6 +11,7 @@ target 'GayaniMadhushika-ios-cobsccomp182p-009' do
 	pod 'FirebaseAuth'
 	pod 'Firebase/Firestore'
 	pod 'Firebase/Database'
+	pod 'GoogleMaps', '~> 2.1.1'
 
   target 'GayaniMadhushika-ios-cobsccomp182p-009Tests' do
     inherit! :search_paths

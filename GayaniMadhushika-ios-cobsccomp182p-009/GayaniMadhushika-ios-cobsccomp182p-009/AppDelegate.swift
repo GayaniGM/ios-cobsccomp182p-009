@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import Firebase
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,12 +20,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
-        
+        Check()
         //Customize the bottom navigation tab bar
         UITabBar.appearance().barTintColor = .white
         UITabBar.appearance().tintColor = .blue
         
+        //Enabled google API
+      GMSServices.provideAPIKey("AIzaSyAycsI-IzacsWpa4dXFTjz5QRkaxNB5kSQ")
         return true
+    
+    }
+    
+    func Check(){
+        if UserDefaults.standard.value(forKey: "email") != nil{
+            let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "bottomTabBar")
+            let navVc = UINavigationController(rootViewController: vc)
+            let share = UIApplication.shared.delegate as? AppDelegate
+            share?.window?.rootViewController = navVc
+            share?.window?.makeKeyAndVisible()
+            
+        
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

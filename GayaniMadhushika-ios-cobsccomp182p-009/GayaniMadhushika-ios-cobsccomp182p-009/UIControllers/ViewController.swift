@@ -68,6 +68,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 //Show alert whether touch id is authenticated or not
                 if success{
                     
+                    let alert = AlertDialog();
+                    alert.showAlert(title: "Successful", message: "You have successfully Authenticated with Touch ID", buttonText: "OK")
                     //Navigate to events detail page
                     let bottomTabBar = self.storyboard?.instantiateViewController(withIdentifier: "bottomTabBar") as! UITabBarController
                     

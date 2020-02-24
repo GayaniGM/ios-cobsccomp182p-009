@@ -101,7 +101,7 @@ class SignUpViewController: UIViewController {
                     
                 }
                 
-                //User created and store username and batchname
+                //User created and store username, batchname, email and password
                 else
                 {
                     let db = Firestore.firestore()
