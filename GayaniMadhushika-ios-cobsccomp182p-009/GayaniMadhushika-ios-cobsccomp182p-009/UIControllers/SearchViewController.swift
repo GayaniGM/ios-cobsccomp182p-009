@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import Firebase
 
 class SearchViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+       
         // Do any additional setup after loading the view.
         if UserDefaults.standard.bool(forKey: "email") == true{
             let  homeVc = self.storyboard?.instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
@@ -20,8 +22,23 @@ class SearchViewController: UIViewController {
             
         }
         
+        let db = Firestore.firestore()
+        
+        db.collection("events").getDocuments(){(QuerySnapshot, err) in
+            if let err = err {
+                print("Error getting data: \(err)")
+            }else
+            {
+                for document in QuerySnapshot!.documents{
+                    print("\(document.documentID) => \(document.data())")
+                }
+            }
+            
+        }
+        
+        
+        
     }
-    
     
     @IBAction func btnLogOut(_ sender: Any) {
         

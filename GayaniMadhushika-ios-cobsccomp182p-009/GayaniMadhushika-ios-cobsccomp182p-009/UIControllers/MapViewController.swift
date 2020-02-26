@@ -12,7 +12,9 @@ import GoogleMaps
 class MapViewController: UIViewController, UISearchBarDelegate, LocateOnTheMap {
 
     
+    @IBOutlet weak var backButton: UIBarButtonItem!
     @IBOutlet weak var googleMapsContainer: UIView!
+    
     var googleMapView: GMSMapView!
     var searchResultController: SearchResultsController!
     var resultArray = [String]()
@@ -60,5 +62,13 @@ class MapViewController: UIViewController, UISearchBarDelegate, LocateOnTheMap {
         }
         
     }
+    
+    @IBAction func goBack(_ sender: Any) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "view") as! CreateEventViewController
+        self.present(vc, animated: true, completion: nil)
+    }
+    
     
 }

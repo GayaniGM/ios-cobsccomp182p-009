@@ -12,38 +12,42 @@ import Firebase
 import MapKit
 import AVFoundation
 
-class CreateEventViewController: UIViewController {
+class CreateEventViewController: UIViewController{
 
     @IBOutlet weak var eventName: UITextField!
     @IBOutlet weak var details: UITextField!
-    @IBOutlet weak var startDateAndTime: UITextField!
-    @IBOutlet weak var endDateAndTme: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var contributerName: UITextField!
     @IBOutlet weak var contributerEmail: UITextField!
     @IBOutlet weak var cost: UITextField!
     @IBOutlet weak var eventImage: UIImageView!
+    @IBOutlet weak var uploadButton: UIButton!
     @IBOutlet weak var updateVenue: UIButton!
     @IBOutlet weak var reviewButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var location: UITextField!
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var sampleStartDateTextField: UITextField!
+    @IBOutlet weak var sampleEndDateTextField: UITextField!
     
     
     var recordingSession: AVAudioSession!
     var audioRecorder: AVAudioRecorder!
     var audioPlayer:AVAudioPlayer!
     
+    var imagePicker = UIImagePickerController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        imagePicker.delegate = self
         setUpButtonStyles()
-
         //setup Recorder
         self.setupView()
+        
+        
     }
-    
     
     //Style up the elements
     func setUpButtonStyles(){
@@ -51,14 +55,15 @@ class CreateEventViewController: UIViewController {
         //style up button and textboxes
         Utilities.styleTextField(eventName)
         Utilities.styleTextField(details)
-        Utilities.styleTextField(startDateAndTime)
-        Utilities.styleTextField(endDateAndTme)
+        Utilities.styleTextField(sampleStartDateTextField)
+        Utilities.styleTextField(sampleEndDateTextField)
         Utilities.styleTextField(contributerName)
         Utilities.styleTextField(contributerEmail)
         Utilities.styleTextField(cost)
         Utilities.styleTextField(location)
         Utilities.styleHollowButton(updateVenue)
         Utilities.styleHollowButton(reviewButton)
+        Utilities.styleHollowButton(uploadButton)
         Utilities.styleFilledButton(saveButton)
         
     }
@@ -84,7 +89,7 @@ class CreateEventViewController: UIViewController {
     }
     
     func loadRecordingUI() {
-        recordButton.isEnabled = true
+        recordButton.isEnabled = false
         playButton.isEnabled = false
         recordButton.setTitle("Tap to Record", for: .normal)
         recordButton.addTarget(self, action: #selector(recordAudioButtonTapped), for: .touchUpInside)
@@ -92,7 +97,7 @@ class CreateEventViewController: UIViewController {
     }
     
     
-    @IBAction func recordAudioButtonTapped(_ sender: UIButton) {
+    @objc func recordAudioButtonTapped(_ sender: UIButton) {
         
         if audioRecorder == nil {
             startRecording()
@@ -179,7 +184,6 @@ class CreateEventViewController: UIViewController {
         return path as URL
     }
     
-    //MARK: Delegates
     
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         if !flag {
@@ -200,27 +204,6 @@ class CreateEventViewController: UIViewController {
         print("Error while playing audio \(error!.localizedDescription)")
     }
     
-    //MARK: To upload video on server
-    
-    func uploadAudioToServer() {
-        /*Alamofire.upload(
-         multipartFormData: { multipartFormData in
-         multipartFormData.append(getFileURL(), withName: "audio.m4a")
-         },
-         to: "https://yourServerLink",
-         encodingCompletion: { encodingResult in
-         switch encodingResult {
-         case .success(let upload, _, _):
-         upload.responseJSON { response in
-         Print(response)
-         }
-         case .failure(let encodingError):
-         print(encodingError)
-         }
-         })*/
-    }
-    
-    
     //Validate whether the inputs are correct display message whether there is an error
     func validateFields() -> String?{
         
@@ -232,24 +215,19 @@ class CreateEventViewController: UIViewController {
         
         return nil
 
+        
+        
     }
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+    @IBAction func uploadButtonTapped(_ sender: Any) {
+        
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.allowsEditing = true
+        present(imagePicker, animated: true, completion: nil)
+
+    }
     
     @IBAction func onClickSubmitToReview(_ sender: Any) {
         
@@ -275,7 +253,7 @@ class CreateEventViewController: UIViewController {
             
             let eventNames = eventName.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let description = details.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-           // let venue  = location.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            //let venue  = location.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let name = contributerName.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let emailAddress = contributerEmail.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
@@ -305,11 +283,14 @@ class CreateEventViewController: UIViewController {
 
                     }
                     
-                    
-                    //Navigate to login page
+            
                   alert.showAlert(title: "Successful", message: "A new Event created", buttonText: "Ok")
                     
+                    
                 }
+                
+                let  detailVc = self.storyboard?.instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
+                self.navigationController?.pushViewController(detailVc, animated: true)
                 
             }
             
@@ -318,4 +299,16 @@ class CreateEventViewController: UIViewController {
     
     
     
+}
+
+
+extension CreateEventViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage{
+            eventImage.image = image
+        }
+        
+        dismiss(animated: true, completion: nil)
+    }
 }

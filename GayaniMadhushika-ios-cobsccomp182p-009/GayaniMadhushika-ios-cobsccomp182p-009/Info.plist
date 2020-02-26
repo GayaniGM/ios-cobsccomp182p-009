@@ -27,9 +27,15 @@
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
-	<array>
-		<string>armv7</string>
-	</array>
+	<string></string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>$)PRODUCT_NAME) would like to access your photos</string>
+	<key>NSCameraUsageDescription</key>
+	<string>$(PRODUCT_NAME) would like to access your camer</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Use to capture user speech</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Use to process user speech</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
