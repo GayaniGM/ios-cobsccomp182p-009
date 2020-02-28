@@ -13,6 +13,10 @@ target 'GayaniMadhushika-ios-cobsccomp182p-009' do
 	pod 'Firebase/Database'
 	pod 'GoogleMaps', '~> 2.1.1'
 	pod 'Firebase/Storage'
+	pod 'FacebookCore'
+	pod 'FacebookLogin'
+	pod 'FacebookShare'
+
 
   target 'GayaniMadhushika-ios-cobsccomp182p-009Tests' do
     inherit! :search_paths

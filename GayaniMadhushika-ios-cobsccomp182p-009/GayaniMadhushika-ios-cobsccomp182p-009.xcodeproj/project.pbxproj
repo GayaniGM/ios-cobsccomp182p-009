@@ -25,9 +25,13 @@
 		8CDFB53423EF1ABF00B7537A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CDFB53323EF1ABE00B7537A /* GoogleService-Info.plist */; };
 		8CDFB53723EF32FD00B7537A /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFB53623EF32FD00B7537A /* Utilities.swift */; };
 		8CE58F63240435BF00FABF6B /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE58F62240435BF00FABF6B /* CreateEventViewController.swift */; };
+		8CE653FA2407C1F20097D4B0 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE653F92407C1F20097D4B0 /* MainTableViewCell.swift */; };
 		8CEA14ED23F3A62E00AAAC3B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEA14EC23F3A62E00AAAC3B /* Constants.swift */; };
 		8CEA337323EFCE8C0073E5BC /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEA337223EFCE8C0073E5BC /* SignInViewController.swift */; };
 		8CED5DC023F24D820064083C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CED5DBF23F24D820064083C /* SignUpViewController.swift */; };
+		8CEF344D24081711005B067D /* PublisherPrflViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEF344C24081711005B067D /* PublisherPrflViewController.swift */; };
+		8CF343502408C07000C7383C /* UserPrflViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF3434F2408C07000C7383C /* UserPrflViewController.swift */; };
+		8CF343522408CD1D00C7383C /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF343512408CD1D00C7383C /* EventDetailViewController.swift */; };
 		E59AA3A928EDB55B6C772CAA /* Pods_GayaniMadhushika_ios_cobsccomp182p_009.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E70BF600F7EAD8442B2DBDB /* Pods_GayaniMadhushika_ios_cobsccomp182p_009.framework */; };
 		FF8E3235B480307948A144F0 /* Pods_GayaniMadhushika_ios_cobsccomp182p_009_GayaniMadhushika_ios_cobsccomp182p_009UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A10175DD983C6EC7360F4E21 /* Pods_GayaniMadhushika_ios_cobsccomp182p_009_GayaniMadhushika_ios_cobsccomp182p_009UITests.framework */; };
 /* End PBXBuildFile section */
@@ -76,9 +80,13 @@
 		8CDFB53323EF1ABE00B7537A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8CDFB53623EF32FD00B7537A /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		8CE58F62240435BF00FABF6B /* CreateEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
+		8CE653F92407C1F20097D4B0 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		8CEA14EC23F3A62E00AAAC3B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8CEA337223EFCE8C0073E5BC /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		8CED5DBF23F24D820064083C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		8CEF344C24081711005B067D /* PublisherPrflViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublisherPrflViewController.swift; sourceTree = "<group>"; };
+		8CF3434F2408C07000C7383C /* UserPrflViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPrflViewController.swift; sourceTree = "<group>"; };
+		8CF343512408CD1D00C7383C /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		9E70BF600F7EAD8442B2DBDB /* Pods_GayaniMadhushika_ios_cobsccomp182p_009.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GayaniMadhushika_ios_cobsccomp182p_009.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A10175DD983C6EC7360F4E21 /* Pods_GayaniMadhushika_ios_cobsccomp182p_009_GayaniMadhushika_ios_cobsccomp182p_009UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GayaniMadhushika_ios_cobsccomp182p_009_GayaniMadhushika_ios_cobsccomp182p_009UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD93A49E413E572174C71176 /* Pods-GayaniMadhushika-ios-cobsccomp182p-009-GayaniMadhushika-ios-cobsccomp182p-009UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GayaniMadhushika-ios-cobsccomp182p-009-GayaniMadhushika-ios-cobsccomp182p-009UITests.debug.xcconfig"; path = "Target Support Files/Pods-GayaniMadhushika-ios-cobsccomp182p-009-GayaniMadhushika-ios-cobsccomp182p-009UITests/Pods-GayaniMadhushika-ios-cobsccomp182p-009-GayaniMadhushika-ios-cobsccomp182p-009UITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -200,9 +208,13 @@
 				8CEA337223EFCE8C0073E5BC /* SignInViewController.swift */,
 				8CED5DBF23F24D820064083C /* SignUpViewController.swift */,
 				8C3FC8B823FB188B007E5BC2 /* SearchViewController.swift */,
+				8CE653F92407C1F20097D4B0 /* MainTableViewCell.swift */,
 				8CE58F62240435BF00FABF6B /* CreateEventViewController.swift */,
+				8CF343512408CD1D00C7383C /* EventDetailViewController.swift */,
 				8C3FC8BA23FB8ECB007E5BC2 /* ResetPasswordViewController.swift */,
 				8CD5DFD224045D9900403D58 /* MapViewController.swift */,
+				8CEF344C24081711005B067D /* PublisherPrflViewController.swift */,
+				8CF3434F2408C07000C7383C /* UserPrflViewController.swift */,
 			);
 			path = UIControllers;
 			sourceTree = "<group>";
@@ -500,11 +512,15 @@
 				8C3FC8B923FB188B007E5BC2 /* SearchViewController.swift in Sources */,
 				8CED5DC023F24D820064083C /* SignUpViewController.swift in Sources */,
 				8C3FC8BB23FB8ECB007E5BC2 /* ResetPasswordViewController.swift in Sources */,
+				8CE653FA2407C1F20097D4B0 /* MainTableViewCell.swift in Sources */,
 				8CDFB4FB23EDF75C00B7537A /* ViewController.swift in Sources */,
 				8CDFB4F923EDF75C00B7537A /* AppDelegate.swift in Sources */,
+				8CEF344D24081711005B067D /* PublisherPrflViewController.swift in Sources */,
 				8C1EBFE423F48C3C00268E5C /* AlertBoxDisplay.swift in Sources */,
+				8CF343502408C07000C7383C /* UserPrflViewController.swift in Sources */,
 				8CDFB52C23EDFD8900B7537A /* CollectionViewCell.swift in Sources */,
 				8CDFB50123EDF75C00B7537A /* GayaniMadhushika_ios_cobsccomp182p_009.xcdatamodeld in Sources */,
+				8CF343522408CD1D00C7383C /* EventDetailViewController.swift in Sources */,
 				8CDFB53723EF32FD00B7537A /* Utilities.swift in Sources */,
 				8CEA14ED23F3A62E00AAAC3B /* Constants.swift in Sources */,
 				8CD5DFD124045CE900403D58 /* SearchResultsController.swift in Sources */,

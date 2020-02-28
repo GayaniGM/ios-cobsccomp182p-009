@@ -30,7 +30,7 @@ class CreateEventViewController: UIViewController{
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var sampleStartDateTextField: UITextField!
     @IBOutlet weak var sampleEndDateTextField: UITextField!
-    
+
     
     var recordingSession: AVAudioSession!
     var audioRecorder: AVAudioRecorder!
@@ -218,14 +218,14 @@ class CreateEventViewController: UIViewController{
         
         
     }
-    
-    
+
 
     @IBAction func uploadButtonTapped(_ sender: Any) {
         
         imagePicker.sourceType = .photoLibrary
         imagePicker.allowsEditing = true
         present(imagePicker, animated: true, completion: nil)
+        
 
     }
     
@@ -253,7 +253,10 @@ class CreateEventViewController: UIViewController{
             
             let eventNames = eventName.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let description = details.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            //let venue  = location.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let venue  = location.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let startDate = sampleStartDateTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let endDate = sampleEndDateTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let costs = cost.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let name = contributerName.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let emailAddress = contributerEmail.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
@@ -273,7 +276,7 @@ class CreateEventViewController: UIViewController{
                 {
                     let db = Firestore.firestore()
 
-                    db.collection("events").addDocument(data: ["eventNames":eventNames,"description":description,"name":name,"emailAddress":emailAddress,"uid": result!.user.uid])
+                    db.collection("events").addDocument(data: ["eventNames":eventNames,"description":description,"venue": venue,"startDate":startDate,"endDate":endDate,"costs":costs,"name":name,"emailAddress":emailAddress,"uid": result!.user.uid])
                     { (error) in
 
                         if error != nil
@@ -297,7 +300,11 @@ class CreateEventViewController: UIViewController{
         }
     }
     
-    
+    @IBAction func goBack(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "view") as! CreateEventViewController
+        self.present(vc, animated: true, completion: nil)
+    }
     
 }
 
