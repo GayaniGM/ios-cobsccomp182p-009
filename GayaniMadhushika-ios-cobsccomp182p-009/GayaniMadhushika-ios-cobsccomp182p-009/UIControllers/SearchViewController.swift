@@ -10,18 +10,42 @@ import UIKit
 import Firebase
 import LocalAuthentication
 
-class SearchViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+protocol DocumentSerializeable {
+    init?(dictionary:[String:Any])
+}
+
+struct Event {
+    var eventNames: String
+    var description: String
+    var venue: String
     
+    var dictionary: [String: Any] {
+        return [
+            "eventNames": eventNames,
+            "description": description,
+            "venue": venue
+        ]
+    }
+}
+
+
+extension Event : DocumentSerializeable {
+    init?(dictionary: [String : Any]) {
+        guard let eventNames = dictionary["eventNames"] as? String,
+            let description = dictionary["description"] as? String,
+            let venue = dictionary["venue"] as? String else {return nil}
+        
+        self.init(eventNames: eventNames, description: description, venue: venue)
+        
+    }
+}
+class SearchViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+
     @IBOutlet weak var table: UITableView!
     
-    var eventsArray = [String]()
+    var db: Firestore!
+    var eventsArray = [Event]()
     private var document: [DocumentSnapshot] = []
-    
-    struct Event {
-        let eventName, description, emailAddress: String
-    }
-    
-    var event = [Event]()
     
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -33,21 +57,22 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellNew = tableView.dequeueReusableCell(withIdentifier: "cellNew", for: indexPath) as! MainTableViewCell
+        let cell = table.dequeueReusableCell(withIdentifier: "cellNew", for: indexPath) as! DisplayTableViewCell
         let events = eventsArray[indexPath.row]
-        cellNew.eventName?.text = events
-        cellNew.details?.text = events
-        cellNew.emailAddress?.text = events
-        return cellNew
+    print(events)
+
+    cell.name?.text = events.eventNames
+    cell.details?.text = events.description
+    cell.venue?.text = events.venue
+        return cell
+
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        table.tableFooterView = UIView(frame: CGRect.zero)
-        self.table.delegate = self
-        self.table.dataSource = self
+        db = Firestore.firestore()
+        loadData()
         
         
         // Do any additional setup after loading the view.
@@ -56,36 +81,39 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
             self.navigationController?.pushViewController(homeVc, animated: true)
         
         }
+        
+    }
 
-        let db = Firestore.firestore()
         
-        db.collection("events").getDocuments(){(QuerySnapshot, err) in
-            if let err = err {
-                print("Error getting data: \(err)")
-            }else
-            {
-                for document in QuerySnapshot!.documents{
-                 print("\(document.documentID) => \(document.data())")
+        func loadData() {
+            db.collection("events").getDocuments() {
+                (snapshot, error) in
+                
+                if let error = error {
                     
-//                    let data = document.data()
-//                    let eventName = data["eventName"] as? String ?? ""
-//                    let description = data["description"] as? String ?? ""
-//                    let emailAddress = data["emailAddress"] as? String ?? ""
-//                    let newEvent = Event(eventName: eventName, description: description, emailAddress: emailAddress)
-//                    self.event.append(newEvent)
-//
-//                    let newIndexPath = IndexPath(row: self.event.count, section: 0)
-//                    self.table.insertRows(at: [newIndexPath], with: .automatic)
-//                    self.table.endUpdates()
-//                }
-//                DispatchQueue.main.async {
-//                    self.table.reloadData()
-              }
+                    
+                    
+                } else {
+                    if let snapshot = snapshot{
+                    
+                    for document in snapshot.documents {
+                        
+                        
+                        
+                        let data = document.data()
+                        let eventNames = data["eventNames"] as? String ?? ""
+                        let description = data["description"] as? String ?? ""
+                        let venue = data["venue"] as? String ?? ""
+                        
+                        let newEvent = Event(eventNames: eventNames, description: description, venue: venue)
+                       self.eventsArray.append(newEvent)
+                    }
+                    
+                    self.table.reloadData()
+                }
+                    
+            }
         }
-        
-        
-        }
-            
     }
     
     @IBAction func userProfile(_ sender: Any) {

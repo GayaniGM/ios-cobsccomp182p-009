@@ -11,6 +11,8 @@ import FirebaseAuth
 import Firebase
 import MapKit
 import AVFoundation
+import FirebaseStorage
+import FirebaseDatabase
 
 class CreateEventViewController: UIViewController{
 
@@ -35,7 +37,7 @@ class CreateEventViewController: UIViewController{
     var recordingSession: AVAudioSession!
     var audioRecorder: AVAudioRecorder!
     var audioPlayer:AVAudioPlayer!
-    
+  
     var imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
@@ -43,8 +45,7 @@ class CreateEventViewController: UIViewController{
         
         imagePicker.delegate = self
         setUpButtonStyles()
-        //setup Recorder
-        self.setupView()
+
         
         
     }
@@ -66,26 +67,6 @@ class CreateEventViewController: UIViewController{
         Utilities.styleHollowButton(uploadButton)
         Utilities.styleFilledButton(saveButton)
         
-    }
-    
-    func setupView() {
-        recordingSession = AVAudioSession.sharedInstance()
-        
-        do {
-            try recordingSession.setCategory(.playAndRecord, mode: .default)
-            try recordingSession.setActive(true)
-            recordingSession.requestRecordPermission() { [unowned self] allowed in
-                DispatchQueue.main.async {
-                    if allowed {
-                        self.loadRecordingUI()
-                    } else {
-                        // failed to record
-                    }
-                }
-            }
-        } catch {
-            // failed to record
-        }
     }
     
     func loadRecordingUI() {
@@ -151,8 +132,8 @@ class CreateEventViewController: UIViewController{
             preparePlayer()
             audioPlayer.play()
         } else {
-            audioPlayer.stop()
-            sender.setTitle("Play", for: .normal)
+           // audioPlayer.stop()
+           // sender.setTitle("Play", for: .normal)
         }
     }
     
@@ -226,8 +207,9 @@ class CreateEventViewController: UIViewController{
         imagePicker.allowsEditing = true
         present(imagePicker, animated: true, completion: nil)
         
-
     }
+    
+    
     
     @IBAction func onClickSubmitToReview(_ sender: Any) {
         

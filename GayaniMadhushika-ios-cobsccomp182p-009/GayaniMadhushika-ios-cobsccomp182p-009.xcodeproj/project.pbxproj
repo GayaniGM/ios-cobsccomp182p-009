@@ -11,6 +11,7 @@
 		8C1EBFE423F48C3C00268E5C /* AlertBoxDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1EBFE323F48C3C00268E5C /* AlertBoxDisplay.swift */; };
 		8C3FC8B923FB188B007E5BC2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3FC8B823FB188B007E5BC2 /* SearchViewController.swift */; };
 		8C3FC8BB23FB8ECB007E5BC2 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3FC8BA23FB8ECB007E5BC2 /* ResetPasswordViewController.swift */; };
+		8CD223A6240BE6E7000466A0 /* DisplayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD223A5240BE6E7000466A0 /* DisplayTableViewCell.swift */; };
 		8CD5DFD124045CE900403D58 /* SearchResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD5DFD024045CE900403D58 /* SearchResultsController.swift */; };
 		8CD5DFD324045D9900403D58 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD5DFD224045D9900403D58 /* MapViewController.swift */; };
 		8CDFB4F923EDF75C00B7537A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFB4F823EDF75C00B7537A /* AppDelegate.swift */; };
@@ -25,7 +26,6 @@
 		8CDFB53423EF1ABF00B7537A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CDFB53323EF1ABE00B7537A /* GoogleService-Info.plist */; };
 		8CDFB53723EF32FD00B7537A /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFB53623EF32FD00B7537A /* Utilities.swift */; };
 		8CE58F63240435BF00FABF6B /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE58F62240435BF00FABF6B /* CreateEventViewController.swift */; };
-		8CE653FA2407C1F20097D4B0 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE653F92407C1F20097D4B0 /* MainTableViewCell.swift */; };
 		8CEA14ED23F3A62E00AAAC3B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEA14EC23F3A62E00AAAC3B /* Constants.swift */; };
 		8CEA337323EFCE8C0073E5BC /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEA337223EFCE8C0073E5BC /* SignInViewController.swift */; };
 		8CED5DC023F24D820064083C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CED5DBF23F24D820064083C /* SignUpViewController.swift */; };
@@ -60,6 +60,7 @@
 		8C1EBFE323F48C3C00268E5C /* AlertBoxDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBoxDisplay.swift; sourceTree = "<group>"; };
 		8C3FC8B823FB188B007E5BC2 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		8C3FC8BA23FB8ECB007E5BC2 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		8CD223A5240BE6E7000466A0 /* DisplayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayTableViewCell.swift; sourceTree = "<group>"; };
 		8CD5DFD024045CE900403D58 /* SearchResultsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsController.swift; sourceTree = "<group>"; };
 		8CD5DFD224045D9900403D58 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		8CDFB4F523EDF75C00B7537A /* GayaniMadhushika-ios-cobsccomp182p-009.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GayaniMadhushika-ios-cobsccomp182p-009.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,7 +81,6 @@
 		8CDFB53323EF1ABE00B7537A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8CDFB53623EF32FD00B7537A /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		8CE58F62240435BF00FABF6B /* CreateEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
-		8CE653F92407C1F20097D4B0 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		8CEA14EC23F3A62E00AAAC3B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8CEA337223EFCE8C0073E5BC /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		8CED5DBF23F24D820064083C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -208,13 +208,13 @@
 				8CEA337223EFCE8C0073E5BC /* SignInViewController.swift */,
 				8CED5DBF23F24D820064083C /* SignUpViewController.swift */,
 				8C3FC8B823FB188B007E5BC2 /* SearchViewController.swift */,
-				8CE653F92407C1F20097D4B0 /* MainTableViewCell.swift */,
 				8CE58F62240435BF00FABF6B /* CreateEventViewController.swift */,
 				8CF343512408CD1D00C7383C /* EventDetailViewController.swift */,
 				8C3FC8BA23FB8ECB007E5BC2 /* ResetPasswordViewController.swift */,
 				8CD5DFD224045D9900403D58 /* MapViewController.swift */,
 				8CEF344C24081711005B067D /* PublisherPrflViewController.swift */,
 				8CF3434F2408C07000C7383C /* UserPrflViewController.swift */,
+				8CD223A5240BE6E7000466A0 /* DisplayTableViewCell.swift */,
 			);
 			path = UIControllers;
 			sourceTree = "<group>";
@@ -510,9 +510,9 @@
 			files = (
 				8CEA337323EFCE8C0073E5BC /* SignInViewController.swift in Sources */,
 				8C3FC8B923FB188B007E5BC2 /* SearchViewController.swift in Sources */,
+				8CD223A6240BE6E7000466A0 /* DisplayTableViewCell.swift in Sources */,
 				8CED5DC023F24D820064083C /* SignUpViewController.swift in Sources */,
 				8C3FC8BB23FB8ECB007E5BC2 /* ResetPasswordViewController.swift in Sources */,
-				8CE653FA2407C1F20097D4B0 /* MainTableViewCell.swift in Sources */,
 				8CDFB4FB23EDF75C00B7537A /* ViewController.swift in Sources */,
 				8CDFB4F923EDF75C00B7537A /* AppDelegate.swift in Sources */,
 				8CEF344D24081711005B067D /* PublisherPrflViewController.swift in Sources */,
