@@ -10,6 +10,13 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
+
+struct UserLoginModel {
+    let userNameTextField: String
+    let passwordTextField: String
+
+}
+
 class SignInViewController: UIViewController {
     
 

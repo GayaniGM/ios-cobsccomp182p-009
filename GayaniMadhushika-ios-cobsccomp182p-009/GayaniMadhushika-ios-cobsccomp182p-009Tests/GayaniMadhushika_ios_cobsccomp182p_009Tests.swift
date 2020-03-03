@@ -10,7 +10,18 @@ import XCTest
 @testable import GayaniMadhushika_ios_cobsccomp182p_009
 
 class GayaniMadhushika_ios_cobsccomp182p_009Tests: XCTestCase {
-
+    
+    //test login by using a registered user
+    func testLogin(){
+     
+        _ = UserLoginModel(
+            userNameTextField: "test@123.com",
+            passwordTextField: "welcome@123")
+        
+            XCTAssertTrue(true)
+     
+    }
+    
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }

@@ -1456,7 +1456,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="QZD-I7-lsq">
                                                     <rect key="frame" x="20" y="11" width="374" height="474"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ay2-2X-1cA">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image3" translatesAutoresizingMaskIntoConstraints="NO" id="ay2-2X-1cA">
                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="294"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Q6-WW-QOQ">
@@ -1559,5 +1559,6 @@
         <image name="icons8-upload-30" width="30" height="30"/>
         <image name="icons8-user" width="50" height="50"/>
         <image name="image11" width="1920" height="1080"/>
+        <image name="image3" width="304" height="166"/>
     </resources>
 </document>

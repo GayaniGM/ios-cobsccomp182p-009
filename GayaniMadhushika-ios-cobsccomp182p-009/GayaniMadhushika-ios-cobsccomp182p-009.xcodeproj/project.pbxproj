@@ -12,6 +12,7 @@
 		8C3FC8B923FB188B007E5BC2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3FC8B823FB188B007E5BC2 /* SearchViewController.swift */; };
 		8C3FC8BB23FB8ECB007E5BC2 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3FC8BA23FB8ECB007E5BC2 /* ResetPasswordViewController.swift */; };
 		8CD223A6240BE6E7000466A0 /* DisplayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD223A5240BE6E7000466A0 /* DisplayTableViewCell.swift */; };
+		8CD4E010240E036200341D15 /* GayaniMadhushika_ios_cobsccomp182p_009Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFB51023EDF75F00B7537A /* GayaniMadhushika_ios_cobsccomp182p_009Tests.swift */; };
 		8CD5DFD124045CE900403D58 /* SearchResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD5DFD024045CE900403D58 /* SearchResultsController.swift */; };
 		8CD5DFD324045D9900403D58 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD5DFD224045D9900403D58 /* MapViewController.swift */; };
 		8CDFB4F923EDF75C00B7537A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFB4F823EDF75C00B7537A /* AppDelegate.swift */; };
@@ -20,7 +21,6 @@
 		8CDFB50123EDF75C00B7537A /* GayaniMadhushika_ios_cobsccomp182p_009.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFB4FF23EDF75C00B7537A /* GayaniMadhushika_ios_cobsccomp182p_009.xcdatamodeld */; };
 		8CDFB50323EDF75F00B7537A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CDFB50223EDF75F00B7537A /* Assets.xcassets */; };
 		8CDFB50623EDF75F00B7537A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CDFB50423EDF75F00B7537A /* LaunchScreen.storyboard */; };
-		8CDFB51123EDF75F00B7537A /* GayaniMadhushika_ios_cobsccomp182p_009Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFB51023EDF75F00B7537A /* GayaniMadhushika_ios_cobsccomp182p_009Tests.swift */; };
 		8CDFB51C23EDF75F00B7537A /* GayaniMadhushika_ios_cobsccomp182p_009UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFB51B23EDF75F00B7537A /* GayaniMadhushika_ios_cobsccomp182p_009UITests.swift */; };
 		8CDFB52C23EDFD8900B7537A /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDFB52B23EDFD8900B7537A /* CollectionViewCell.swift */; };
 		8CDFB53423EF1ABF00B7537A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8CDFB53323EF1ABE00B7537A /* GoogleService-Info.plist */; };
@@ -133,6 +133,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8CD4E00D240DA4B100341D15 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8CDFB4FC23EDF75C00B7537A /* Main.storyboard */,
+				8CDFB50423EDF75F00B7537A /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		8CDFB4EC23EDF75C00B7537A = {
 			isa = PBXGroup;
 			children = (
@@ -159,9 +168,8 @@
 			isa = PBXGroup;
 			children = (
 				8CDFB4F823EDF75C00B7537A /* AppDelegate.swift */,
-				8CDFB4FC23EDF75C00B7537A /* Main.storyboard */,
-				8CDFB50423EDF75F00B7537A /* LaunchScreen.storyboard */,
-				8CEA336B23EFBA060073E5BC /* UIControllers */,
+				8CD4E00D240DA4B100341D15 /* View */,
+				8CEA336B23EFBA060073E5BC /* Controllers */,
 				8CDFB53523EF329C00B7537A /* Helpers */,
 				8CDFB50223EDF75F00B7537A /* Assets.xcassets */,
 				8CDFB50723EDF75F00B7537A /* Info.plist */,
@@ -192,7 +200,6 @@
 		8CDFB53523EF329C00B7537A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				8CD5DFD024045CE900403D58 /* SearchResultsController.swift */,
 				8CDFB53623EF32FD00B7537A /* Utilities.swift */,
 				8CEA14EC23F3A62E00AAAC3B /* Constants.swift */,
 				8C1EBFE323F48C3C00268E5C /* AlertBoxDisplay.swift */,
@@ -200,7 +207,7 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		8CEA336B23EFBA060073E5BC /* UIControllers */ = {
+		8CEA336B23EFBA060073E5BC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				8CDFB4FA23EDF75C00B7537A /* ViewController.swift */,
@@ -215,8 +222,9 @@
 				8CEF344C24081711005B067D /* PublisherPrflViewController.swift */,
 				8CF3434F2408C07000C7383C /* UserPrflViewController.swift */,
 				8CD223A5240BE6E7000466A0 /* DisplayTableViewCell.swift */,
+				8CD5DFD024045CE900403D58 /* SearchResultsController.swift */,
 			);
-			path = UIControllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		B03EBB47100B88FAB5C1D331 /* Pods */ = {
@@ -533,7 +541,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CDFB51123EDF75F00B7537A /* GayaniMadhushika_ios_cobsccomp182p_009Tests.swift in Sources */,
+				8CD4E010240E036200341D15 /* GayaniMadhushika_ios_cobsccomp182p_009Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
